@@ -427,7 +427,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget buildButtons(String title, int index) {
     return GestureDetector(
       onTap: () {
+        timer.cancel();
         setTime(index);
+        isTimerRunning = false;
         selectedIndex = index;
       },
       child: Container(
