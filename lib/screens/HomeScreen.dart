@@ -172,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: floatingFullScreen()),
         backgroundColor: Colors.black,
         body: Container(
-          decoration: slideShowboxDecoration(),
+          decoration: isStartSlideShow?slideShowboxDecoration(): null,
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: SingleChildScrollView(
